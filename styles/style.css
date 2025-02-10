@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgb(247, 241, 234);
+}
+
+h1 {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: rgb(69, 151, 251);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.result {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(69, 151, 251);
+  width: 70%;
+  height: auto;
+  overflow-x: auto;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid rgb(69, 151, 251);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
